@@ -1,12 +1,25 @@
-# Config for the Gemini Pull Request Review Bot.
+# 👑 BETTY'S IRON GATEKEEPER: PR REVIEW CONFIG
 # https://github.com/marketplace/gemini-code-assist
-have_fun: false
+
+have_fun: true
+
 code_review:
   disable: false
-  comment_severity_threshold: "HIGH"
+  # I want to see EVERY flaw. No mercy.
+  comment_severity_threshold: "LOW"
   max_review_comments: -1
   pull_request_opened:
     help: false
     summary: true
     code_review: true
-ignore_patterns: []
+
+# Do not waste my time reviewing compiled trash, lockfiles, or secrets.
+ignore_patterns: 
+  - "dist/**"
+  - "build/**"
+  - "node_modules/**"
+  - "pnpm-lock.yaml"
+  - "application_credentials.json"
+  - ".env*"
+  - "*.db"
+  - "*.sqlite"

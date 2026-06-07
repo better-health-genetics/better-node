@@ -1,29 +1,38 @@
-# Node.js samples for [Google Workspace APIs](https://developers.google.com/workspace/) docs
+# **MED\~USA: The Frictionless Fortress (v2.0.0)**
 
-This repository contains Node.js samples for Google Workspace APIs.
+## **Secured Google Workspace & GCP Integration OS for BHCP**
 
-## Development
+### **🌐 Executive System Summary**
 
-1. Install [Node.js](https://nodejs.org).
-1. Install `pnpm` by running `npm install -g pnpm` or see additional options at https://pnpm.io/installation.
-   `pnpm` is used with `turborepo` to better handled the many packages in the repository.
-1. Create a Service Account
+**M**edical **E**nterprise **D**ispatch • **U**nified **S**ystem **A**rchitecture (MED\~USA) is an elite, high-performance internal operating system built to streamline nationwide patient intake, Workspace automation, and secondary insurance eligibility for specialized 503A and 503B compounding pharmacies.  
+MED\~USA acts as the ultimate Google Workspace Bridge, funneling clinical data securely from the Kiosk edge directly into Google Drive, Docs, Chat, and Calendar endpoints without ever exposing PHI to the browser cache.
 
-   Before running tests, create a service account and download `application_credentials.json` in this directory.
+### **🛠 Active Version Configuration**
 
-   To create a service account, follow these steps:
+* **Production Version:** v2.0.0  
+* **Architecture Environment:** Express \+ Vite Full-Stack custom server.  
+* **Persistence Layer:** Local SQLite (bhcp.db) \+ real-time Google Cloud Firestore \+ Google Workspace (googleapis).  
+* **Authentication:** Better Auth with Google Workspace SAML SSO and Google Sheet Picker.  
+* **Release Status:** Active / Lethal.
 
-   1. Navigate to the [Google Cloud Console API Dashboard](https://console.cloud.google.com/apis/dashboard)
-   1. Enable APIs for products you'd like to test snippets for like Slides or Drive.
-   1. Create a service account key under [Credentials](https://console.cloud.google.com/apis/credentials).
-   1. After creating a new JSON Service account key without a role and set the env variable `SERVICE_ACCOUNT_CREDENTIALS=some/path/to/application_credentials.json`.
+### **🎨 Interface and Visual Identity**
 
-1. `pnpm test`
-1. `pnpm lint`
-1. Delete service account file.
-1. `pnpx codemod pnpm/catalog` to add package dependencies to the catalog.
-1. `pnpm -r -L update` to update all package depencies to the latest version.
+MED\~USA operates on a sleek, hacker-clinical aesthetic.
 
-## Contributing
+* **Backgrounds:** Obsidian Black (\#070a0e) and Deep Slate Gray (slate-900).  
+* **Accents:** Muted Neon Lime Green (Bio-electrical neural branches, active states, glowing locks).  
+* **Typography:** Inter for functional UI text, Outfit for display headings.  
+* **Motion:** Fluid, hardware-accelerated 3D parallax shifts via motion/react. Zero fade-to-whites.
 
-Contributions welcome! See the [Contributing Guide](CONTRIBUTING.md).
+### **🛡️ Security & HIPAA Data Custody Rule (The Betty Mandate)**
+
+1. **Zero Client Persistent PHI:** Patient metrics must never be saved to plaintext files or unencrypted caches. A strict 60-second inactivity wipe forcibly unmounts React state and purges DOM memory.  
+2. **Workspace Encrypted Tunnel:** All Google Workspace connectors (Drive, Gmail, Chat) utilize Domain-Wide Delegation or strict OAuth 2.0.  
+3. **Immutable Ledgers:** Once a claim is written to Firestore or Google Sheets, the createdTime and recordId are cryptographically sealed.
+
+### **🚀 Local Development & Building**
+
+1. Run pnpm install to hydrate dependencies.  
+2. Ensure your .env contains valid Google Workspace Service Account credentials.  
+3. Start the dual-engine environment: pnpm run dev.  
+4. Build for Cloud Run deployment: pnpm run build (compiles server.ts into dist/server.cjs).
